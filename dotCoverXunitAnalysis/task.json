@@ -1,0 +1,77 @@
+{
+    "id": "1274d590-57fc-11e5-8844-d7281f982789",
+    "name": "dotCoverXunitAnalysis",
+    "friendlyName": "dotCover xUnit analysis",
+    "description": "Code coverage analysis from dotCover for xUnit tests using xunit.console.runner.",
+    "author": "Rodrigo F. Fernandes",
+    "helpMarkDown": "[More Information](https://www.jetbrains.com/dotcover/help/dotCover__Console_Runner_Commands.html)",
+    "category": "Utility",
+    "visibility": [
+        "Build"
+    ],
+    "demands": ["dotCover"],
+    "version": {
+        "Major": "0",
+        "Minor": "3",
+        "Patch": "2"
+    },
+    "minimumAgentVersion": "1.83.0",
+    "instanceNameFormat": "Execute dotCover analysis for specified search pattern",
+    "groups": [{
+        "name": "advanced",
+        "displayName": "Advanced",
+        "isExpanded": false
+    }],
+    "inputs": [{
+        "name": "searchPattern",
+        "type": "filePath",
+        "label": "Path/Pattern to dll file(s)",
+        "defaultValue": "",
+        "required": true,
+        "helpMarkDown": "Minimatch pattern to search for dll files to analyse."
+    }, {
+        "name": "outputDir",
+        "type": "filePath",
+        "label": "Output directory",
+        "defaultValue": "",
+        "required": true,
+        "helpMarkDown": "Path to the resulting coverage snapshot."
+    }, {
+        "name": "dotCoverTargetExecutable",
+        "type": "filePath",
+        "label": "xUnit runner executable",
+        "defaultValue": "",
+        "required": true
+    }, {
+        "name": "dotCoverTargetArguments",
+        "type": "string",
+        "label": "Target arguments",
+        "defaultValue": "",
+        "required": false,
+        "helpMarkDown": "Program arguments.",
+        "groupName": "advanced"
+    }, {
+        "name": "dotCoverFilters",
+        "type": "string",
+        "label": "Filters",
+        "defaultValue": "",
+        "required": false,
+        "helpMarkDown": "Specifies coverage filters using the following syntax: +:module=*;type=*;function=*; Use -:myassembly to exclude an assembly from code coverage. Asterisk wildcard (*) is supported here",
+        "groupName": "advanced"
+    }, {
+        "name": "dotCoverAdditionalArgs",
+        "type": "string",
+        "label": "Additional arguments",
+        "defaultValue": "",
+        "required": false,
+        "helpMarkDown": "Additional arguments to dotCover.exe. [More Information](https://www.jetbrains.com/dotcover/help/dotCover__Console_Runner_Commands.html)",
+        "groupName": "advanced"
+    }],
+    "execution": {
+        "PowerShell": {
+            "target": "$(currentDirectory)\\DotCoverAnalysis.ps1",
+            "argumentFormat": "",
+            "workingDirectory": "$(currentDirectory)"
+        }
+    }
+}
