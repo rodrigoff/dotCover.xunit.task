@@ -4,6 +4,7 @@ param (
     [string]$dotCoverTargetExecutable,
     [string]$dotCoverTargetArguments,
     [string]$dotCoverFilters,
+    [string]$dotCoverAttributeFilters,
     [string]$dotCoverAdditionalArgs
 )
 
@@ -66,6 +67,11 @@ foreach ($fileToCover in $foundFiles)
     if ($dotCoverFilters)
     {
         $coverArgs = ($coverArgs + " /Filters=$dotCoverFilters")
+    }
+
+    if ($dotCoverAttributeFilters)
+    {
+        $coverArgs = ($coverArgs + " /AttributeFilters=$dotCoverAttributeFilters")
     }
 
     Write-Host "--ARGS: $coverArgs"

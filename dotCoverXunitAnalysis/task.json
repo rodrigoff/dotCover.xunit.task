@@ -13,7 +13,7 @@
     "version": {
         "Major": "0",
         "Minor": "3",
-        "Patch": "2"
+        "Patch": "3"
     },
     "minimumAgentVersion": "1.83.0",
     "instanceNameFormat": "Execute dotCover analysis for specified search pattern",
@@ -56,6 +56,14 @@
         "defaultValue": "",
         "required": false,
         "helpMarkDown": "Specifies coverage filters using the following syntax: +:module=*;type=*;function=*; Use -:myassembly to exclude an assembly from code coverage. Asterisk wildcard (*) is supported here",
+        "groupName": "advanced"
+    }, {
+        "name": "dotCoverAttributeFilters",
+        "type": "string",
+        "label": "Attribute filters",
+        "defaultValue": "",
+        "required": false,
+        "helpMarkDown": "pecifies attribute filters using the following syntax: filter1;filter2;... Asterisk wildcard (*) is supported here.",
         "groupName": "advanced"
     }, {
         "name": "dotCoverAdditionalArgs",
