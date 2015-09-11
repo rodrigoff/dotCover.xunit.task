@@ -48,7 +48,6 @@
         "label": "Target arguments",
         "defaultValue": "",
         "required": false,
-        "helpMarkDown": "Program arguments.",
         "groupName": "advanced"
     }, {
         "name": "dotCoverFilters",
