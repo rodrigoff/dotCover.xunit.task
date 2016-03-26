@@ -1,6 +1,6 @@
 {
   "name": "dotCover.xunit.task",
   "tagline": "dotCover analysis using xunit.console.runner task for VSTS",
-  "body": "### dotCover.xunit.task\r\nThis task executes the dotCover analysis during the build process of VSTS.\r\n\r\n### Installation\r\nThis task can be installed by using [tfx-cli](https://github.com/Microsoft/tfs-cli)\r\n\r\n### Contact\r\nHaving trouble with the task? Open an issue or contact @rodrigoff\r\n",
+  "body": "### dotCover.xunit.task\r\nThis task executes the dotCover analysis during the build process of VSTS.\r\n\r\n### Installation\r\nThis task can be installed by using [tfx-cli](https://github.com/Microsoft/tfs-cli)\r\n\r\n### Disclaimer\r\nThis task is provided as-is, without warranty of any kind, express or implied and requires a valid dotCover 9.2+ license.\r\ndotCover is a registered trademark of JetBrains and the task is developed independently of JetBrains.\r\n\r\n### Contact\r\nHaving trouble with the task? Open an issue or contact @rodrigoff\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
